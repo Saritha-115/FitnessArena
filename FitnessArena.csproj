@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4AAA1AA-EC8D-43C2-AEA0-7B7EF049F58B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FitnessArena</RootNamespace>
+    <AssemblyName>FitnessArena</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Krypton.Toolkit">
+      <HintPath>..\..\GROUP PROJECT\Nuget test\WindowsFormsApp1\packages\Krypton.Toolkit.70.22.11.312\lib\net47\Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin dash.Designer.cs">
+      <DependentUpon>Admin dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin forgot pw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin forgot pw.Designer.cs">
+      <DependentUpon>admin forgot pw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin log in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin log in.Designer.cs">
+      <DependentUpon>admin log in.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin registration.Designer.cs">
+      <DependentUpon>admin registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin user info panel1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin user info panel1.Designer.cs">
+      <DependentUpon>admin user info panel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_add_exersice_panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_add_exersice_panel.Designer.cs">
+      <DependentUpon>admin_add_exersice_panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_add_schedule_panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_add_schedule_panel.Designer.cs">
+      <DependentUpon>admin_add_schedule_panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_member_info_panel1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_member_info_panel1.Designer.cs">
+      <DependentUpon>admin_member_info_panel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DynamicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dynamic_Report.Designer.cs">
+      <DependentUpon>Dynamic_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forgot_pw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot_pw.Designer.cs">
+      <DependentUpon>Forgot_pw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member dash.Designer.cs">
+      <DependentUpon>Member dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member log in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member log in.Designer.cs">
+      <DependentUpon>Member log in.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member registration.Designer.cs">
+      <DependentUpon>member registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member schedule info panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member schedule info panel.Designer.cs">
+      <DependentUpon>member schedule info panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member user info panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member user info panel.Designer.cs">
+      <DependentUpon>member user info panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UserVerify.cs" />
+    <EmbeddedResource Include="Admin dash.resx">
+      <DependentUpon>Admin dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin forgot pw.resx">
+      <DependentUpon>admin forgot pw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin log in.resx">
+      <DependentUpon>admin log in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin registration.resx">
+      <DependentUpon>admin registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin user info panel1.resx">
+      <DependentUpon>admin user info panel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_add_exersice_panel.resx">
+      <DependentUpon>admin_add_exersice_panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_add_schedule_panel.resx">
+      <DependentUpon>admin_add_schedule_panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_member_info_panel1.resx">
+      <DependentUpon>admin_member_info_panel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DynamicWizard.rdlc" />
+    <EmbeddedResource Include="Dynamic_Report.resx">
+      <DependentUpon>Dynamic_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forgot_pw.resx">
+      <DependentUpon>Forgot_pw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member dash.resx">
+      <DependentUpon>Member dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member log in.resx">
+      <DependentUpon>Member log in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member registration.resx">
+      <DependentUpon>member registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member schedule info panel.resx">
+      <DependentUpon>member schedule info panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member user info panel.resx">
+      <DependentUpon>member user info panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DynamicDataSet.xsc">
+      <DependentUpon>DynamicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DynamicDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DynamicDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DynamicDataSet.xss">
+      <DependentUpon>DynamicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member reg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fgt pw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login member 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member dash panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member dash panel dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member dash bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member dash bg new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin dash panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin dash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\members.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin dash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin dash1aaaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin dashzz1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
